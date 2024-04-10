@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Virtual Urban Flow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ajout de la police Permanent Marker -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <!-- Logo -->
+            <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="/public/images/logo.png" height="50px" width="50px"></a>
+            
+            <!-- Slogan -->
+            <div class="w3-bar-item w3-hide-small w3-hide-medium w3-center" style="flex-grow: 1;">
+                Dessiné par l'IA, porté avec audace.
+            </div>
+
+            <!-- Dropdown Menu for small screens -->
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <!-- Dropdown Menu for large screens -->
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-button w3-padding-large" title="More"><i class="fa fa-bars"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">Accueil</a>
+                    <a href="#" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="#" class="w3-bar-item w3-button">Equipe</a>
+                    <a href="#" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- petite navbar -->
+    <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Accueil</a>
+        <a href="catwalk.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Défilés</a>
+        <a href="team.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Equipe</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+    </div>
+
+<img src="/public/images/substitut.jpg" alt="substitut">
+  
+        <!-- End Page Content -->
+    </div>
+
+    
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity green"></i>
+        <i class="fa fa-instagram w3-hover-opacity green"></i>
+        <i class="fa fa-snapchat w3-hover-opacity green"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity green"></i>
+        <i class="fa fa-twitter w3-hover-opacity green"></i>
+        <i class="fa fa-linkedin w3-hover-opacity green"></i>
+       
+    <!-- Footer end. -->
+    </footer>
+
+   
+
+</body>
+  <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</html>
