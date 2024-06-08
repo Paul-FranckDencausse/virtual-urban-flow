@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Virtual Urban Flow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ajout de la police Permanent Marker -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <!-- Left-aligned menu for large screens -->
+            <div class="w3-hide-small w3-left">
+                <a href="#" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
+            </div>
+
+            <!-- Hamburger menu for small screens -->
+            <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
+                <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">Accueil</a>
+                    <a href="" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+
+            <!-- Centered slogan and logo -->
+            <div class="w3-bar-item w3-card w3-display-middle">
+                <img src="/public/images/logo_vert.png" alt="logo" class="logo  w3-center"style="height:50px">
+                <br>
+                <span>Dessiné par l'IA, porté avec audace.</span>
+            </div>
+
+            <!-- Right-aligned login icon -->
+            <a href="{{ path('app_login') }}" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-key green">Connexion</i>
+            </a>
+        </div>
+    </div>
+    <div class="w3-display-middle w3-center">
+        <h1 class="green">
+            Bienvenue sur la page des informations légales
+        </h1>
+
+        <p>
+            Veuillez trouver ci-dessous les liens vers nos différentes pages d'informations légales :
+        </p>
+
+        <ul class="w3-left">
+            <li>
+                <a href="/legalStuff/cgu.html">
+                    CGU
+                </a>
+            </li>
+
+            <li>
+                <a href="/legalStuff/cgv.html">
+                    CGV
+                </a>
+            </li>
+
+            <li>
+                <a href="/legalStuff/rgpd.html">
+                    RGPD
+                </a>
+            </li>
+        </ul>
+    </div>
+     <footer class="w3-container w3-padding-16 ">
+    <!-- Mentions légales sur la gauche -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_legal') }}" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
+    </div>
+    
+    <!-- Icônes des réseaux sociaux au centre -->
+    <div class="w3-third w3-container  w3-center">
+        <a href="https://www.instagram.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-instagram green w3-hover-opacity"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/v2/login" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-snapchat green w3-hover-opacity"></i></a>
+        <a href="https://x.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="  green w3-hover-opacity">X</i></a>
+    </div>
+    
+    <!-- Lien vers la page Nos services sur la droite -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_services') }}" class="w3-button w3-right w3-text-light-grey">Nos services</a>
+    </div>
+</footer>
+

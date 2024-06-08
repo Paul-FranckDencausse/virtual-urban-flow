@@ -13,91 +13,155 @@
 </head>
 <body>
 
-    <!-- Navbar -->
+  <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-card">
-            <!-- Logo -->
-            <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="/public/images/logo.png" height="50px" width="50px"></a>
-            
-            <!-- Slogan -->
-            <div class="w3-bar-item w3-hide-small w3-hide-medium w3-center" style="flex-grow: 1;">
-                Dessiné par l'IA, porté avec audace.
+            <!-- Left-aligned menu for large screens -->
+            <div class="w3-hide-small w3-left">
+                <a href="#" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
             </div>
 
-            <!-- Dropdown Menu for small screens -->
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-
-            <!-- Dropdown Menu for large screens -->
-            <div class="w3-dropdown-hover w3-hide-small w3-right">
-                <button class="w3-button w3-padding-large" title="More"><i class="fa fa-bars"></i></button>
+            <!-- Hamburger menu for small screens -->
+            <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
+                <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="#" class="w3-bar-item w3-button">Accueil</a>
-                    <a href="#" class="w3-bar-item w3-button">Défilés</a>
-                    <a href="#" class="w3-bar-item w3-button">Equipe</a>
-                    <a href="#" class="w3-bar-item w3-button">Contact</a>
+                    <a href="" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
                 </div>
             </div>
+
+            <!-- Centered slogan and logo -->
+            <div class="w3-bar-item w3-card w3-display-middle">
+                <img src="/public/images/logo_vert.png" alt="logo" class="logo  w3-center"style="height:50px">
+                <br>
+                <span>Dessiné par l'IA, porté avec audace.</span>
+            </div>
+
+            <!-- Right-aligned login icon -->
+            <a href="{{ path('app_login') }}" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-key green">Connexion</i>
+            </a>
         </div>
     </div>
+    </div>
 
-    <!-- petite navbar -->
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Accueil</a>
-        <a href="catwalk.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Défilés</a>
-        <a href="team.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Equipe</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Accueil</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Défilés</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Equipe</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
     </div>
-
     <!-- Page  -->
-    <div class="w3-content" style="max-width:2000px;margin-top:46px">
-  <!--  Contact  --><div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2><p class="w3-opacity w3-center">
-        <i>N'hésitez pas!</i></p>
-        <div class="w3-row w3-padding-32">
-            <div class="w3-col m6 w3-large w3-margin-bottom">
-                <i class="fa fa-map-marker green" style="width:30px">
-                    </i> Bordeaux, France<br>
-                    <i class="fa fa-phone green" style="width:30px">
-                        </i> 0643538715<br>
-                        <i class="fa fa-envelope green" style="width:30px">
-                             </i>paul1903@live.fr<br></div>
-                             <div class="w3-col m6"><form action="" target="_blank"><div class="w3-row-padding" style="margin:0 -16px 8px -16px"><div class="w3-half"><input class="w3-input w3-border" type="text" placeholder="Nom" required name="Name"></div><div class="w3-half"><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></div></div><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"><button class="w3-button  w3-section w3-right" type="submit">ENVOYER</button></form></div></div></div>
-        <!-- End Page Content -->
+    <!DOCTYPE html>
+<html lang="fr">
+
+<!-- Balise head non modifiée -->
+
+<body>
+
+<!-- Navbar non modifiée -->
+
+<div class="w3-container w3-margin-top w3-light-grey">
+    <h2 class="w3-center">Formulaire de contact</h2>
+
+    <form action="/submit_form" method="post">
+        <div class="w3-section w3-row">
+            <div class="w3-col" style="width:33.33%">
+                <label class="w3-label w3-text-blue"><b>Nom</b></label>
+                <input class="w3-input w3-border" type="text" name="name" required>
+
+                <label class="w3-label w3-text-blue"><b>Adresse e-mail</b></label>
+                <input class="w3-input w3-border" type="text" name="email" required>
+
+                <label class="w3-label w3-text-blue"><b>Nom de la marque/du créateur</b></label>
+                <input class="w3-input w3-border" type="text" name="brand" required>
+
+                <label class="w3-label w3-text-blue"><b>Site web (si applicable)</b></label>
+                <input class="w3-input w3-border" type="url" name="website">
+            </div>
+
+            <div class="w3-col" style="width:33.33%">
+                <label class="w3-label w3-text-blue"><b>Prénom</b></label>
+                <input class="w3-input w3-border" type="text" name="firstName" required>
+
+                <label class="w3-label w3-text-blue"><b>Numéro de téléphone</b></label>
+                <input class="w3-input w3-border" type="number" name="number" required>
+
+                <label class="w3-label w3-text-blue"><b>Réseaux sociaux</b></label>
+                <input class="w3-input w3-border" type="text" name="socialMedia" required>
+
+                <label class="w3-label w3-text-blue"><b>Budget estimé pour le défilé virtuel</b></label>
+                <input class="w3-input w3-border" type="number" name="budget" required>
+            </div>
+
+            <div class="w3-col" style="width:33.33%">
+                <label class="w3-label w3-text-blue"><b>Nom de famille</b></label>
+                <input class="w3-input w3-border" type="text" name="givenName" required>
+
+                <label class="w3-label w3-text-blue"><b>Adresse</b></label>
+                <input class="w3-input w3-border" type="text" name="address" required>
+
+                <label class="w3-label w3-text-blue"><b>Nombre approximatif de tenues à présenter</b></label>
+                <input class="w3-input w3-border" type="number" name="outfitCount" required>
+            </div>
+        </div>
+
+        <label class="w3-label w3-text-blue"><b>Description de la collection</b></label>
+        <textarea class="w3-input w3-border" name="collectionDescription" required></textarea>
+
+        <label class="w3-label w3-text-blue"><b>Date(s) souhaitée(s) pour le défilé</b></label>
+        <input class="w3-input w3-border" type="date" name="desiredDates" required>
+
+        <label class="w3-label w3-text-blue"><b>Thème ou concept du défilé</b></label>
+        <textarea class="w3-input w3-border" name="concept" required></textarea>
+
+        <label class="w3-label w3-text-blue"><b>Exigences techniques</b></label>
+        <textarea class="w3-input w3-border" name="technicalRequirements"></textarea>
+
+        <label class="w3-label w3-text-blue"><b>Autres informations</b></label>
+        <textarea class="w3-input w3-border" name="additionalInformation"></textarea>
+
+        <label class="w3-label w3-text-blue"><b>J'accepte que mes informations soient utilisées pour le traitement de ma demande.</b></label>
+        <input class="w3-check" type="checkbox" name="consent" required>
+
+        <button class="w3-button w3-blue w3-section" type="submit">Envoyer</button>
+    </form>
+</div>
+
+<!-- Footer non modifié -->
+
+</body>
+</html>
+
+
+  <footer class="w3-container w3-padding-16 ">
+    <!-- Mentions légales sur la gauche -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_legal') }}" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
     </div>
-
     
+    <!-- Icônes des réseaux sociaux au centre -->
+    <div class="w3-third w3-container  w3-center">
+        <a href="https://www.instagram.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-instagram green w3-hover-opacity"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/v2/login" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-snapchat green w3-hover-opacity"></i></a>
+        <a href="https://x.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="  green w3-hover-opacity">X</i></a>
+    </div>
+    
+    <!-- Lien vers la page Nos services sur la droite -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_services') }}" class="w3-button w3-right w3-text-light-grey">Nos services</a>
+    </div>
+</footer>
 
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity green"></i>
-        <i class="fa fa-instagram w3-hover-opacity green"></i>
-        <i class="fa fa-snapchat w3-hover-opacity green"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity green"></i>
-        <i class="fa fa-twitter w3-hover-opacity green"></i>
-        <i class="fa fa-linkedin w3-hover-opacity green"></i>
-       
-    <!-- Footer end. -->
-    </footer>
 
     <script>
-        // Automatic Slideshow - change image every 4 seconds
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4000);
-        }
+        
 
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
@@ -109,13 +173,7 @@
             }
         }
 
-        // When the user clicks anywhere outside of the modal, close it
-        var modal = document.getElementById('ticketModal');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+     
     </script>
 
 </body>

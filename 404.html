@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <title>Virtual Urban Flow</title>
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="script" href="/public/scripts/script.js">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Ajout de la police Permanent Marker -->
@@ -13,34 +14,41 @@
 </head>
 <body>
 
-    <!-- Navbar -->
+  <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-card">
-            <!-- Logo -->
-            <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="/public/images/logo.png" height="50px" width="50px"></a>
-            
-            <!-- Slogan -->
-            <div class="w3-bar-item w3-hide-small w3-hide-medium w3-center" style="flex-grow: 1;">
-                Dessiné par l'IA, porté avec audace.
+            <!-- Left-aligned menu for large screens -->
+            <div class="w3-hide-small w3-left">
+                <a href="#" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
             </div>
 
-            <!-- Dropdown Menu for small screens -->
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-
-            <!-- Dropdown Menu for large screens -->
-            <div class="w3-dropdown-hover w3-hide-small w3-right">
-                <button class="w3-button w3-padding-large" title="More"><i class="fa fa-bars"></i></button>
+            <!-- Hamburger menu for small screens -->
+            <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
+                <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="#" class="w3-bar-item w3-button">Accueil</a>
-                    <a href="#" class="w3-bar-item w3-button">Défilés</a>
-                    <a href="#" class="w3-bar-item w3-button">Equipe</a>
-                    <a href="#" class="w3-bar-item w3-button">Contact</a>
+                    <a href="" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
                 </div>
             </div>
+
+            <!-- Centered slogan and logo -->
+            <div class="w3-bar-item w3-card w3-display-middle">
+                <img src="/public/images/logo_vert.png" alt="logo" class="logo  w3-center"style="height:50px">
+                <br>
+                <span>Dessiné par l'IA, porté avec audace.</span>
+            </div>
+
+            <!-- Right-aligned login icon -->
+            <a href="{{ path('app_login') }}" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-key green">Connexion</i>
+            </a>
         </div>
+    </div>
     </div>
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
@@ -58,54 +66,28 @@
 
     
 
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity green"></i>
-        <i class="fa fa-instagram w3-hover-opacity green"></i>
-        <i class="fa fa-snapchat w3-hover-opacity green"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity green"></i>
-        <i class="fa fa-twitter w3-hover-opacity green"></i>
-        <i class="fa fa-linkedin w3-hover-opacity green"></i>
-       
-    <!-- Footer end. -->
-    </footer>
+  <footer class="w3-container w3-padding-16 ">
+    <!-- Mentions légales sur la gauche -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_legal') }}" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
+    </div>
+    
+    <!-- Icônes des réseaux sociaux au centre -->
+    <div class="w3-third w3-container  w3-center">
+        <a href="https://www.instagram.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-instagram green w3-hover-opacity"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/v2/login" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-snapchat green w3-hover-opacity"></i></a>
+        <a href="https://x.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="  green w3-hover-opacity">X</i></a>
+    </div>
+    
+    <!-- Lien vers la page Nos services sur la droite -->
+    <div class="w3-third w3-container">
+        <a href="{{ path('app_services') }}" class="w3-button w3-right w3-text-light-grey">Nos services</a>
+    </div>
+</footer>
+
 
    
-  <script>
-        // Automatic Slideshow - change image every 4 seconds
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4000);
-        }
-
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        var modal = document.getElementById('ticketModal');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+  
 </body>
 
 </html>

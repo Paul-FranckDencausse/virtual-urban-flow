@@ -1,0 +1,111 @@
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Virtual Urban Flow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="script" href="/public/scripts/script.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ajout de la police Permanent Marker -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+ <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <!-- Left-aligned menu for large screens -->
+            <div class="w3-hide-small w3-left">
+                <a href="index.html" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="catwalks.html" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
+            </div>
+
+            <!-- Hamburger menu for small screens -->
+            <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
+                <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="index.html" class="w3-bar-item w3-button">Accueil</a>
+                    <a href="catwalks.html" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+
+            <!-- Centered slogan and logo -->
+            <div class="w3-bar-item w3-card w3-display-middle">
+                <img src="/public/images/logo_vert.png" alt="logo" class="logo  w3-center"style="height:50px">
+                <br>
+                <span>Dessiné par l'IA, porté avec audace.</span>
+            </div>
+
+            <!-- Right-aligned login icon -->
+            <a href="login.html" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-key green">Connexion</i>
+            </a>
+        </div>
+    </div>
+<body>{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    Nos Services et Tarifs - Virtual Urban Flow
+{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="services">
+    <h2 class="w3-wide green">Nos Services et Tarifs</h2>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+        <thead>
+            <tr class="w3-light-grey">
+                <th class="purple">Service</th>
+                <th class="purple">Description</th>
+                <th class="purple">Tarif</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Création de défilé personnalisé</td>
+                <td>Conception d'un défilé de mode streetwear personnalisé avec choix des modèles et des tenues.</td>
+                <td>500€ par défilé</td>
+            </tr>
+            <tr>
+                <td>Consultation de style IA</td>
+                <td>Session de consultation pour intégrer l'intelligence artificielle dans la création de designs uniques.</td>
+                <td>150€ par heure</td>
+            </tr>
+            <tr>
+                <td>Accès premium à la plateforme</td>
+                <td>Accès illimité à toutes nos ressources et défilés, avec priorité sur les nouvelles collections.</td>
+                <td>75€ par mois</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</head>
+ <footer class="w3-container w3-padding-16 ">
+    <!-- Mentions légales sur la gauche -->
+    <div class="w3-third w3-container">
+        <a href="legal.html" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
+    </div>
+    
+    <!-- Icônes des réseaux sociaux au centre -->
+    <div class="w3-third w3-container  w3-center">
+        <a href="https://www.instagram.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-instagram green w3-hover-opacity"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/v2/login" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-snapchat green w3-hover-opacity"></i></a>
+        <a href="https://x.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="  green w3-hover-opacity">X</i></a>
+    </div>
+    
+    <!-- Lien vers la page Nos services sur la droite -->
+    <div class="w3-third w3-container">
+        <a href="tarifs.html" class="w3-button w3-right w3-text-light-grey">Nos services</a>
+    </div>
+</footer>

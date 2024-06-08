@@ -1,0 +1,116 @@
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Virtual Urban Flow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="script" href="/public/scripts/script.js">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ajout de la police Permanent Marker -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+ <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <!-- Left-aligned menu for large screens -->
+            <div class="w3-hide-small w3-left">
+                <a href="index.html" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="catwalks.html" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
+            </div>
+
+            <!-- Hamburger menu for small screens -->
+            <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
+                <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="index.html" class="w3-bar-item w3-button">Accueil</a>
+                    <a href="catwalks.html" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+                </div>
+            </div>
+
+            <!-- Centered slogan and logo -->
+            <div class="w3-bar-item w3-card w3-display-middle">
+                <img src="/public/images/logo_vert.png" alt="logo" class="logo  w3-center"style="height:50px">
+                <br>
+                <span>Dessiné par l'IA, porté avec audace.</span>
+            </div>
+
+            <!-- Right-aligned login icon -->
+            <a href="login.html" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-key green">Connexion</i>
+            </a>
+        </div>
+    </div>
+
+</head>
+<body>
+    {% extends 'base.html.twig' %}
+
+{% block title %}Conditions Générales d'Utilisation - Virtual Urban Flow{% endblock %}
+
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<h1 class="green">Conditions Générales d'Utilisation</h1>
+
+<h2 class="purple">1. Préambule</h2>
+<p>Ces conditions générales d’utilisation (« CGU ») régissent l’accès et l’utilisation du site Virtual Urban Flow, accessible à l’adresse [URL de votre site]. En accédant ou en utilisant le site, vous acceptez d’être lié par ces conditions.</p>
+
+<h2 class="purple">2. Description du service</h2>
+<p>Virtual Urban Flow est une plateforme en ligne qui permet aux utilisateurs de créer et de visualiser des défilés de mode streetwear générés par intelligence artificielle. Les utilisateurs peuvent sélectionner des paramètres pour personnaliser les modèles, les vêtements et les mises en scène.</p>
+
+<h2 class="purple">3. Accès au site</h2>
+<p><strong>a.</strong> L’accès au site est ouvert à tous les utilisateurs ayant une connexion internet. Certains services sont toutefois réservés aux utilisateurs inscrits ayant créé un compte.<br>
+<strong>b.</strong> L’utilisateur s’engage à fournir des informations véridiques lors de la création de son compte.</p>
+
+<h2 class="purple">4. Propriété intellectuelle</h2>
+<p><strong>a.</strong> Le contenu du site, y compris les textes, graphismes, logos, images, ainsi que leur sélection et disposition, est protégé par le droit de la propriété intellectuelle.<br>
+<strong>b.</strong> Il est interdit de copier, modifier, distribuer, vendre ou louer tout ou partie de nos services ou du logiciel associé.</p>
+
+<h2 class="purple">5. Utilisation des services</h2>
+<p><strong>a.</strong> L’utilisateur s’engage à ne pas utiliser les services à des fins illégales ou non autorisées.<br>
+<strong>b.</strong> L’utilisateur est seul responsable du contenu qu'il génère.</p>
+
+<h2 class="purple">6. Limitation de responsabilité</h2>
+<p>Virtual Urban Flow ne peut être tenu responsable des dommages indirects qui pourraient survenir du fait de l’achat ou de l’utilisation des produits proposés sur le site.</p>
+
+<h2 class="purple">7. Modification des CGU</h2>
+<p>Nous nous réservons le droit de modifier les présentes CGU à tout moment. Les modifications prendront effet immédiatement après leur publication sur le site.</p>
+
+<h2 class="purple">8. Contact</h2>
+<p>Pour toute question ou réclamation concernant Virtual Urban Flow, veuillez nous contacter à [adresse email].</p>
+
+<h2 class="purple">9. Droit applicable et juridiction compétente</h2>
+<p>Ces CGU sont régies par le droit français. Tout litige lié à leur interprétation et/ou à leur exécution relève des tribunaux français.</p>
+
+
+{% endblock %}
+
+</body>
+ <footer class="w3-container w3-padding-16 ">
+    <!-- Mentions légales sur la gauche -->
+    <div class="w3-third w3-container">
+        <a href="legal.html" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
+    </div>
+    
+    <!-- Icônes des réseaux sociaux au centre -->
+    <div class="w3-third w3-container  w3-center">
+        <a href="https://www.instagram.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-instagram green w3-hover-opacity"></i></a>
+        <a href="https://accounts.snapchat.com/accounts/v2/login" class="w3-text-light-grey w3-large w3-margin-right"><i class="fa fa-snapchat green w3-hover-opacity"></i></a>
+        <a href="https://x.com/" class="w3-text-light-grey w3-large w3-margin-right"><i class="  green w3-hover-opacity">X</i></a>
+    </div>
+    
+    <!-- Lien vers la page Nos services sur la droite -->
+    <div class="w3-third w3-container">
+        <a href="tarifs.html" class="w3-button w3-right w3-text-light-grey">Nos services</a>
+    </div>
+</footer>

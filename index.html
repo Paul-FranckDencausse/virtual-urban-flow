@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="script" href="/public/scripts/script.js">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Ajout de la police Permanent Marker -->
@@ -18,20 +19,20 @@
         <div class="w3-bar w3-card">
             <!-- Left-aligned menu for large screens -->
             <div class="w3-hide-small w3-left">
-                <a href="{{ path('app_home') }}" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
-                <a href="{{ path('app_catwalks') }}" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
-                <a href="{{ path('app_team') }}" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
-              <a href="{{ path('contact') }}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
+                <a href="#" class="w3-bar-item  fa fa-home green w3-button">Accueil</a>
+                <a href="" class="w3-bar-item fa fa-camera green w3-button">Défilés</a>
+                <a href="team.html" class="w3-bar-item fa fa-group green w3-button">Equipe</a>
+              <a href="contact.html}"class="w3-bar-item fa fa-envelope green w3-button">Contact</a>
             </div>
 
             <!-- Hamburger menu for small screens -->
             <div class="w3-dropdown-hover w3-hide-large w3-hide-medium w3-left">
                 <button class="w3-button" title="Plus"><i class="fa fa-bars"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="{{ path('app_home') }}" class="w3-bar-item w3-button">Accueil</a>
-                    <a href="{{ path('app_catwalks') }}" class="w3-bar-item w3-button">Défilés</a>
-                    <a href="{{ path('app_team') }}" class="w3-bar-item w3-button">Equipe</a>
-                   <a href="{{ path('contact') }}" class="w3-bar-item w3-button">Contact</a>
+                    <a href="#" class="w3-bar-item w3-button">Accueil</a>
+                    <a href="" class="w3-bar-item w3-button">Défilés</a>
+                    <a href="team.html" class="w3-bar-item w3-button">Equipe</a>
+                   <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
                 </div>
             </div>
 
@@ -84,7 +85,7 @@
 
                 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
                     <div class="w3-third w3-margin-bottom">
-                         <img src="{{ asset('build/images/triangle.jpg') }}" alt="triangle" style="width:100%" class="w3-hover-opacity">
+                         <img src="/public/images/sadida.jpg" }}" alt="triangle" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container ">
                             <p class="green">Sadida</p>
                             <p class="w3-opacity purple">Impossible is not French</p>
@@ -96,7 +97,7 @@
                         </div>
                     </div>
                     <div class="w3-third w3-margin-bottom">
-                         <img src="{{ asset('build/images/cougar.jpg') }}" alt="Cougar" style="width:100%" class="w3-hover-opacity">
+                         <img src="/public/images/cougar.jpg" alt="Cougar" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container ">
                             <p class="green">Cougar</p>
                             <p class="w3-opacity purple">Unleash your wild side</p>
@@ -107,7 +108,7 @@
                         </div>
                     </div>
                     <div class="w3-third w3-margin-bottom">
-                        <img src="{{ asset('build/images/pallas.jpg') }}" alt="Pallas" style="width:100%" class="w3-hover-opacity">
+                        <img src="/public/images/pallas.jpg" alt="Pallas" style="width:100%" class="w3-hover-opacity">
                         <div class="w3-container ">
                             <p class="green">Pallas</p>
                             <p class="w3-opacity purple">Just do it</p>
@@ -153,7 +154,7 @@
 <footer class="w3-container w3-padding-16 ">
     <!-- Mentions légales sur la gauche -->
     <div class="w3-third w3-container">
-        <a href="{{ path('app_legal') }}" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
+        <a href="legal.html" class="w3-button w3-left w3-text-light-grey">Mentions légales</a>
     </div>
     
     <!-- Icônes des réseaux sociaux au centre -->
